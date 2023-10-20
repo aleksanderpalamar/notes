@@ -19,12 +19,15 @@ const ErrorFallback = ({ error, resetErrorBoundary }: ErrorFallbackProps) => {
   return (
     <div
       role="alert"
-      className="h-full w-full flex flex-col items-center justify-center"
+      className="h-full w-full flex flex-col items-center justify-center space-y-4"
     >
       <h1 className="text-2xl font-bold text-violet-500">
         Something went wrong:
       </h1>
-      <pre className="text-sm text-zinc-500">{error.message}</pre>
+      <pre className="text-sm text-zinc-500">
+        Error:{" "}
+        <span className="text-rose-500">{error.message}</span>
+      </pre>
       <Button
         onClick={resetErrorBoundary || handlePushToHome}
         variant="ghost"
