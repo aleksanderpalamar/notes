@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./error";
 import { Navigation } from "./_components/navigation";
+import { SearchCommand } from "@/components/search-command";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useConvexAuth();
@@ -27,7 +28,10 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <div className="h-full flex dark:bg-[#1f1f1f]">
           <Navigation />
-          <main className="flex-1 h-full overflow-y-auto">{children}</main>
+          <main className="flex-1 h-full overflow-y-auto">
+            <SearchCommand />
+            {children}
+          </main>
         </div>
       </ErrorBoundary>
     </>
