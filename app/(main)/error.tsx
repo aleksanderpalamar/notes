@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { RefreshCw } from "lucide-react";
+import { LucideFileWarning, RefreshCw } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export type ErrorFallbackProps = {
@@ -21,6 +22,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: ErrorFallbackProps) => {
       role="alert"
       className="h-full w-full flex flex-col items-center justify-center space-y-4"
     >
+      <LucideFileWarning size={96} className="text-rose-500" />
       <h1 className="text-2xl font-bold text-violet-500">
         Something went wrong:
       </h1>
@@ -35,7 +37,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: ErrorFallbackProps) => {
         className="text-zinc-500"
       >
         Try again
-        <RefreshCw className="ml-2 h-4 w-4" />
+        <RefreshCw className="ml-2 h-4 w-4" />        
       </Button>
     </div>
   );
