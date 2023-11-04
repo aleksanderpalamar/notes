@@ -12,6 +12,19 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Notes App",
   description: "The connected workspace where better, faster work happens.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "Notes App",
+    description: "The connected workspace where better, faster work happens.",
+    url: "https://notes.vercel.app",
+    siteName: "Notes App",    
+    locale: "en-US",
+    type: "website",
+  }
 };
 
 export default function RootLayout({

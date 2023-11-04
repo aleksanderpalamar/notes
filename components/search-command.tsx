@@ -80,7 +80,7 @@ export const SearchCommand = () => {
               <span className="line-clamp-1 text-sm font-medium text-muted-foreground">
                 {document.title}
               </span>
-            </CommandItem>
+            </CommandItem>            
           ))}
         </CommandGroup>
       </CommandList>
